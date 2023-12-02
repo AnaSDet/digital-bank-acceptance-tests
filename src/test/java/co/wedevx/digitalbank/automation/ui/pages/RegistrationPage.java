@@ -117,26 +117,18 @@ public void fillOutRegistrationForm(List<Map<String, String>> registrationTestDa
         dobTxt.sendKeys(firstRow.get("dob"));
     }
 
-
     if(firstRow.get("ssn") != null) {
-        if (firstRow.get("ssn").equalsIgnoreCase("random")) {
-            ssnTxt.sendKeys(mockData.generateRandomSsn());
+       ssnTxt.sendKeys(firstRow.get("ssn"));
         }
-    }
-
 
     if(firstRow.get("email") != null) {
-        if (firstRow.get("email").equalsIgnoreCase("random")) {
-            Map<String, String> mockNameAndEmail = mockData.generateRandomNameAndEmail();
-            emailAddressTxt.sendKeys(mockNameAndEmail.get("email"));
-        }
+       emailAddressTxt.sendKeys(firstRow.get("email"));
     }
 
     if(firstRow.get("password") != null) {
         passwordTxt.sendKeys(firstRow.get("password"));
         passwordConfirmTxt.sendKeys(firstRow.get("password"));
     }
-
 
     nextButton.click();
 
@@ -174,7 +166,6 @@ public void fillOutRegistrationForm(List<Map<String, String>> registrationTestDa
         if (firstRow.get("workPhone") != null) {
             workPhoneTxt.sendKeys(firstRow.get("workPhone"));
         }
-
 
         if (firstRow.get("termsCheckMark") != null) {
             if (firstRow.get("termsCheckMark").equalsIgnoreCase("true")) {

@@ -9,9 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ViewCheckingAccountPage extends BasePage{
-
-    private WebDriver driver;
+public class ViewCheckingAccountPage extends BaseMenuPage{
 
     public ViewCheckingAccountPage (WebDriver driver){
       super(driver);

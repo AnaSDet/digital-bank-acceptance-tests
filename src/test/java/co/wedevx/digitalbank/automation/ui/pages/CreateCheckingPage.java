@@ -12,17 +12,11 @@ import java.util.NoSuchElementException;
 import static co.wedevx.digitalbank.automation.ui.utils.Driver.getDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CreateCheckingPage extends BasePage{
+public class CreateCheckingPage extends BaseMenuPage{
 
     public CreateCheckingPage (WebDriver driver){
         super(driver);
     }
-
-    @FindBy(id = "checking-menu")
-    private WebElement checkingMenu;
-
-    @FindBy(id = "new-checking-menu-item")
-    private WebElement newCheckingButton;
 
     @FindBy(id ="Standard Checking")
     private WebElement standardCheckingAccountTypeRadioButton;
@@ -44,7 +38,6 @@ public class CreateCheckingPage extends BasePage{
 
     @FindBy(id = "newCheckingSubmit")
     private WebElement submitBtn;
-
 
 
     public void createNewChecking(List<NewCheckingAccountInfo> checkingAccountInfoList){
